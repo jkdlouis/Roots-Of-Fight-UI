@@ -1,0 +1,48 @@
+.nav > li > a:focus, .nav > li > a:hover {
+  background-color: transparent; }
+
+.dropdown-menu {
+  background-color: transparent;
+  color: #f7f7f7; }
+
+.dropdown-menu > li > a {
+  color: #f7f7f7;
+  padding: 5px 8px;
+  text-align: left; }
+
+.dropdown-menu > li > a:hover {
+  background-color: transparent;
+  color: #FF0000; }
+
+.dropdown {
+  background-color: transparent;
+  color: #f7f7f7;
+  margin-right: 30px; }
+
+.dropdown-toggle {
+  background-color: transparent;
+  border: none; }
+
+.dropdown-toggle::after {
+  display: none; }
+
+.main-header .logo-header {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  background: transparent;
+  min-height: 50px; }
+.main-header .mobile-nav {
+  padding: 2px 0;
+  color: #f7f7f7; }
+  .main-header .mobile-nav ul.nav-item li a {
+    display: block;
+    margin: 20px 0;
+    position: relative; }
+.main-header .desktop-nav .desktop-nav-menu ul > li > a {
+  padding: 0 20px;
+  color: #f7f7f7;
+  line-height: 30px; }
+.main-header .desktop-nav .desktop-nav-menu ul > li > a:hover {
+  color: #FF0000; }
+
+/*# sourceMappingURL=header.component.css.map */

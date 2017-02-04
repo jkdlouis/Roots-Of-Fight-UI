@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAIA,IAAI;EACF,WAAW,EAAE,qCAAqC;EAClD,KAAK,EAAE,OAAO;EACd,WAAW,EAAE,GAAG;EAChB,SAAS,EAAE,IAAI;EACf,cAAc,EAAE,GAAG;EACnB,OAAO,EAAE,CAAC;EACV,MAAM,EAAE,CAAC;EACT,WAAW,EAAE,MAAM;EACnB,UAAU,EAAE,MAAM;;AAEpB,uCAAuC;EACrC,KAAK,ECdY,OAAO;EDexB,eAAe,EAAE,IAAI;;AAEvB,OAAO;EACL,KAAK,EChBI,OAAO",
+"sources": ["app.component.sass","colors.sass"],
+"names": [],
+"file": "app.component.css"
+}

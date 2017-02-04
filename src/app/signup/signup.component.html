@@ -1,0 +1,24 @@
+<div class="row sign-up">
+    <div class="col-xs-12 col-md-4 col-md-offset-4">
+        <h1>Create Account</h1>
+        <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" class="form-control" formControlName="firstName">
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" class="form-control" formControlName="lastName">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" formControlName="email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" formControlName="password">
+            </div>
+            <button type="submit" class="submit-btn" [disabled]="!signUpForm.valid">Create</button> or <a [routerLink]="['/login']">Login to an Existing Account</a>
+        </form>
+    </div>
+</div>

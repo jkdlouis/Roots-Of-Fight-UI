@@ -1,0 +1,174 @@
+<div class="main-header">
+    <div class="row text-center logo-header">
+        <div class="col-xs-6 col-xs-push-5">
+            <img src="../../assets/images/logo-retina.png" class="img-responsive" alt="Roots Of Fight" width="250px">
+        </div>
+        <div class="col-xs-6 hidden-xs">
+            <ul class="user nav nav-bar list-unstyled list-inline pull-right">
+                <li class="dropdown">
+                    <button class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Account  <i class="fa fa-user fa-lg" aria-hidden="true"></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a [routerLink] = "['/signup']">Sign Up</a></li>
+                        <li><a [routerLink] = "['/login']">Login</a></li>
+                    </ul>
+                    <ul class="dropdown-menu hidden" aria-labelledby="dropdownMenu1">
+                        <li><a [routerLink] = "['/orders']">My Orders</a></li>
+                        <li><a [routerLink] = "['/wishlist']">My Wishlist</a></li>
+                        <li><a [routerLink] = "['/logout']">Log Out</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <button class="dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Cart  <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <li><a [routerLink] = "['/cart']">View Cart</a></li>
+                        <li><a [routerLink] = "['/checkout']">Check Out</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--desktop    -->
+    <div class="row text-center desktop-nav hidden-xs">
+        <div class="col-xs-12 col-xs-offset-3">
+            <nav class="desktop-nav-menu">
+                <ul class="nav nav-bar list-unstyled list-inline">
+                    <li><a class="nav-title" role="button" (click)="toggle('shopListIsExpanded')">SHOP
+                        <i class="fa fa-chevron-left" aria-hidden="true"
+                           [ngClass]="{'fa-chevron-left' : !shopListIsExpanded,
+                                   'fa-chevron-down' : shopListIsExpanded
+                                   }"></i>
+                    </a>
+                        <ul class="list-unstyled nav-items" *ngIf="shopListIsExpanded">
+                            <li><a>- {{ shopLists[0]}} -</a></li>
+                            <li *ngFor="let shopList of shopLists | slice: 1"><a>{{ shopList }}</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-title" role="button" (click)="toggle('martialArtIsExpanded')">MARTIAL ARTS
+                        <i class="fa fa-chevron-left" aria-hidden="true"
+                           [ngClass]="{'fa-chevron-left' : !martialArtIsExpanded,
+                                   'fa-chevron-down' : martialArtIsExpanded
+                                   }"></i></a>
+                        <ul class="list-unstyled nav-items" *ngIf="martialArtIsExpanded">
+                            <li><a role="button">- ALL MARTIAL ARTS -</a></li>
+                            <li><a role="button" (click)="toggle('strikingIsExpanded')">STRIKING
+                                <i class="fa fa-plus"
+                                   aria-hidden="true"
+                                   [ngClass]="{'fa-plus': !strikingIsExpanded,
+                                           'fa-minus': strikingIsExpanded}"></i></a>
+                                <ul class="list-unstyled nav-items" *ngIf="strikingIsExpanded">
+                                    <li *ngFor="let striking of strikingArts">
+                                        <a>{{ striking }}</a></li>
+                                </ul>
+                            </li>
+                            <li><a role="button" (click)="toggle('grapplingIsExpanded')">GRAPPLING
+                                <i class="fa fa-plus"
+                                   aria-hidden="true"
+                                   [ngClass]="{
+                                           'fa-plus': !grapplingIsExpanded,
+                                           'fa-minus': grapplingIsExpanded
+                                           }"></i></a>
+                                <ul class="list-unstyled nav-items" *ngIf="grapplingIsExpanded">
+                                    <li *ngFor="let grappling of grapplingArts"><a>{{ grappling }}</a></li>
+                                </ul>
+                            </li>
+                            <li><a role="button" (click)="toggle('weaponIsExpanded')">WEAPONS
+                                <i class="fa fa-plus"
+                                   aria-hidden="true"
+                                   [ngClass]="{
+                                           'fa-plus': !weaponIsExpanded,
+                                           'fa-minus': weaponIsExpanded
+                                           }"></i></a>
+                                <ul class="list-unstyled nav-items" *ngIf="weaponIsExpanded">
+                                    <li *ngFor="let weapon of weaponArts"><a>{{ weapon }}</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-title">NEW RELEASES</a></li>
+                    <li><a class="nav-title">COLLECTIONS</a></li>
+                    <li><a class="nav-title">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!--mobile -->
+    <div class="row text-center mobile-nav visible-xs">
+        <div class="col-xs-12">
+            <nav class="mobile-nav-menu">
+                <div class="col-xs-3">
+                    <a role="button" (click)="toggle('mainMenuIsExpanded')">
+                        <i class="fa fa-bars fa-3x" aria-hidden="true"></i></a>
+                    <!--toggle menu-->
+                    <ul class="list-unstyled nav-item" *ngIf="mainMenuIsExpanded">
+                        <li>
+                            <a role="button" (click)="toggle('shopListIsExpanded')">SHOP
+                                <i class="fa fa-plus" aria-hidden="true"
+                                   [ngClass]="{'fa-plus': !shopListIsExpanded,
+                                           'fa-minus': shopListIsExpanded}"
+                                   aria-hidden="true"></i></a>
+                            <ul class="list-unstyled" *ngIf="shopListIsExpanded">
+                                <li><a>- {{ shopLists[0]}} -</a></li>
+                                <li *ngFor="let shopList of shopLists | slice: 1"><a>{{ shopList }}</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a role="button" (click)="toggle('martialArtIsExpanded')">MARTIAL ARTS
+                                <i class="fa fa-plus"
+                                   [ngClass]="{'fa-plus': !martialArtIsExpanded,
+                                               'fa-minus': martialArtIsExpanded}"
+                                   aria-hidden="true"></i></a>
+                            <ul class="list-unstyled nav-item" *ngIf="martialArtIsExpanded">
+                                <li><a role="button">- ALL MARTIAL ARTS -</a></li>
+                                <li><a role="button" (click)="toggle('strikingIsExpanded')">STRIKING
+                                    <i class="fa fa-plus"
+                                       aria-hidden="true"
+                                       [ngClass]="{'fa-plus': !strikingIsExpanded,
+                                           'fa-minus': strikingIsExpanded}"></i></a></li>
+                                <ul class="list-unstyled nav-item" *ngIf="strikingIsExpanded">
+                                    <li *ngFor="let striking of strikingArts">
+                                        <a>{{ striking }}</a></li>
+                                </ul>
+                                <li><a role="button" (click)="toggle('grapplingIsExpanded')">GRAPPLING
+                                    <i class="fa fa-plus"
+                                       aria-hidden="true"
+                                       [ngClass]="{
+                                           'fa-plus': !strikingIsExpanded,
+                                           'fa-minus': strikingIsExpanded
+                                           }"></i></a></li>
+                                <ul class="list-unstyled nav-item" *ngIf="grapplingIsExpanded">
+                                    <li *ngFor="let grappling of grapplingArts"><a>{{ grappling }}</a></li>
+                                </ul>
+                                <li><a role="button" (click)="toggle('weaponIsExpanded')">WEAPONS
+                                    <i class="fa fa-plus"
+                                       aria-hidden="true"
+                                       [ngClass]="{
+                                           'fa-plus': !weaponIsExpanded,
+                                           'fa-minus': weaponIsExpanded
+                                           }"></i></a>
+                                    <ul class="list-unstyled nav-items" *ngIf="weaponIsExpanded">
+                                        <li *ngFor="let weapon of weaponArts"><a>{{ weapon }}</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-3">
+                    <a><i class="fa fa-search fa-3x" aria-hidden="true"></i></a>
+                </div>
+                <div class="col-xs-3">
+                    <a><i class="fa fa-user fa-3x" aria-hidden="true"></i></a>
+                </div>
+                <div class="col-xs-3">
+                    <a><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>

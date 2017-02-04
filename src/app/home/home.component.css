@@ -1,0 +1,36 @@
+/*
+Error: The line was indented 2 levels deeper than the previous line.
+        on line 14 of home.component.sass
+
+9: 
+10:  .product-slider
+11:   margin: 0 auto
+12: 
+13:   h4
+14:     margin-bottom: 50px
+
+Backtrace:
+home.component.sass:14
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/engine.rb:519:in `tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/engine.rb:523:in `tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/engine.rb:523:in `tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/engine.rb:406:in `_to_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/engine.rb:378:in `_render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/engine.rb:295:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/plugin/compiler.rb:209:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/plugin.rb:82:in `update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/exec/sass_scss.rb:361:in `watch_or_update'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/exec/base.rb:52:in `parse'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/exec/base.rb:19:in `parse!'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/bin/sass:13:in `<top (required)>'
+/usr/bin/sass:23:in `load'
+/usr/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: The line was indented 2 levels deeper than the previous line.\A         on line 14 of home.component.sass\A \A 9: \A 10:  .product-slider\A 11:   margin: 0 auto\A 12: \A 13:   h4\A 14:     margin-bottom: 50px"; }
