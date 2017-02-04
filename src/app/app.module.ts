@@ -15,6 +15,7 @@ import { LogoutComponent } from "./logout/logout.component";
 import { OrdersComponent } from './orders/orders.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
 import { LoginComponent } from './login/login.component';
+import { AuthService } from './service/authentication.service';
 
 @NgModule({
     declarations: [
@@ -37,7 +38,7 @@ import { LoginComponent } from './login/login.component';
         ReactiveFormsModule,
         Routing
     ],
-    providers: [],
+    providers: [AuthService],
     bootstrap: [ AppComponent ]
 })
 export class AppModule {

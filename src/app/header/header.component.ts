@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../service/authentication.service';
+import { Router } from "@angular/router";
 
 @Component({
     selector: 'app-header',
@@ -6,6 +8,8 @@ import { Component } from '@angular/core';
     styleUrls: ['header.component.sass']
 })
 export class HeaderComponent {
+
+    constructor(private authService: AuthService, private router: Router) {}
 
     // boolean for toggle
 
@@ -53,6 +57,13 @@ export class HeaderComponent {
 
     toggle(expanded) {
         this[expanded] = !this[expanded];
+    }
+
+    // User Account Authenticaltion
+
+    onLogout() {
+        this.authService.logout();
+        this.router.navigate(['/signin']);
     }
 
 }
