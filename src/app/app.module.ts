@@ -11,11 +11,11 @@ import { FooterComponent } from './footer/footer.component';
 import { TeesComponent } from './tees/tees.component';
 import { HomeComponent } from './home/home.component';
 import { SignupComponent } from "./signup/signup.component";
-import { LogoutComponent } from "./logout/logout.component";
 import { OrdersComponent } from './orders/orders.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
 import { LoginComponent } from './login/login.component';
 import { AuthService } from './service/authentication.service';
+import { UserComponent } from './header/user/user.component';
 
 @NgModule({
     declarations: [
@@ -25,10 +25,10 @@ import { AuthService } from './service/authentication.service';
         TeesComponent,
         HomeComponent,
         SignupComponent,
-        LogoutComponent,
         OrdersComponent,
         WishlistComponent,
-        LoginComponent
+        LoginComponent,
+        UserComponent
     ],
     imports: [
         BrowserModule,

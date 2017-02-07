@@ -1,34 +1,10 @@
 <div class="main-header">
     <div class="row text-center logo-header">
-        <div class="col-xs-6 col-xs-push-5">
-            <img src="../../assets/images/logo-retina.png" class="img-responsive" alt="Roots Of Fight" width="250px">
+        <div class="col-xs-9 col-xs-push-5">
+            <a [routerLink]="['/']"><img src="../../assets/images/logo-retina.png" class="img-responsive" alt="Roots Of Fight" width="250px"></a>
         </div>
-        <div class="col-xs-6 hidden-xs">
-            <ul class="user nav nav-bar list-unstyled list-inline pull-right">
-                <li class="dropdown">
-                    <button class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        Account  <i class="fa fa-user fa-lg" aria-hidden="true"></i>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <li><a [routerLink] = "['/signup']">Sign Up</a></li>
-                        <li><a [routerLink] = "['/login']">Login</a></li>
-                    </ul>
-                    <ul class="dropdown-menu hidden" aria-labelledby="dropdownMenu1">
-                        <li><a [routerLink] = "['/orders']">My Orders</a></li>
-                        <li><a [routerLink] = "['/wishlist']">My Wishlist</a></li>
-                        <li><a [routerLink] = "['/logout']" (click)="onLogout()">Log Out</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <button class="dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        Cart  <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                        <li><a [routerLink] = "['/cart']">View Cart</a></li>
-                        <li><a [routerLink] = "['/checkout']">Check Out</a></li>
-                    </ul>
-                </li>
-            </ul>
+        <div class="col-xs-3 col-xs-push-1 hidden-xs">
+            <app-user></app-user>
         </div>
     </div>
 
@@ -91,7 +67,7 @@
                     </li>
                     <li><a class="nav-title">NEW RELEASES</a></li>
                     <li><a class="nav-title">COLLECTIONS</a></li>
-                    <li><a class="nav-title">CONTACT</a></li>
+                    <li><a class="nav-title">SALE</a></li>
                 </ul>
             </nav>
         </div>
