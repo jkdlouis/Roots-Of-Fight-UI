@@ -3,11 +3,11 @@
       <button class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
         Account  <i class="fa fa-user fa-lg" aria-hidden="true"></i>
       </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+      <ul *ngIf="!isLoggedIn()" class="dropdown-menu" aria-labelledby="dropdownMenu1">
         <li><a [routerLink] = "['/signup']">Sign Up</a></li>
         <li><a [routerLink] = "['/login']">Login</a></li>
       </ul>
-      <ul class="dropdown-menu hidden" aria-labelledby="dropdownMenu1">
+      <ul *ngIf="isLoggedIn()" class="dropdown-menu" aria-labelledby="dropdownMenu1">
         <li><a [routerLink] = "['/orders']">My Orders</a></li>
         <li><a [routerLink] = "['/wishlist']">My Wishlist</a></li>
         <li><a [routerLink] = "['/logout']" (click)="onLogout()">Log Out</a></li>
@@ -17,7 +17,7 @@
       <button class="dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
         Cart  <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>
       </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+      <ul *ngIf="isLoggedIn()" class="dropdown-menu" aria-labelledby="dropdownMenu2">
         <li><a [routerLink] = "['/cart']">View Cart</a></li>
         <li><a [routerLink] = "['/checkout']">Check Out</a></li>
       </ul>
