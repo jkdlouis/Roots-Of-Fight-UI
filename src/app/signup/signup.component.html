@@ -1,22 +1,53 @@
 <div class="row sign-up">
     <div class="col-xs-12 col-md-4 col-md-offset-4">
         <h1>Create Account</h1>
-        <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+        <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()" novalidate>
             <div class="form-group">
                 <label for="firstName">First Name</label>
                 <input type="text" class="form-control" formControlName="firstName">
+                <div *ngIf="signUpForm.get('firstName').hasError('required') && signUpForm.get('firstName').touched" class="error">
+                    First Name is Required
+                </div>
+                <div *ngIf="signUpForm.get('firstName').hasError('minlength') && signUpForm.get('firstName').touched" class="error">
+                    Minimum of 2 characters
+                </div>
+                <div *ngIf="signUpForm.get('firstName').hasError('maxlength') && signUpForm.get('firstName').touched" class="error">
+                    Maximum of 24 characters
+                </div>
             </div>
             <div class="form-group">
                 <label for="lastName">Last Name</label>
                 <input type="text" class="form-control" formControlName="lastName">
+                <div *ngIf="signUpForm.get('lastName').hasError('required') && signUpForm.get('lastName').touched" class="error">
+                    Last name is required
+                </div>
+                <div *ngIf="signUpForm.get('lastName').hasError('minlength') && signUpForm.get('lastName').touched" class="error">
+                    Minimum of 2 characters
+                </div>
+                <div *ngIf="signUpForm.get('lastName').hasError('maxlength') && signUpForm.get('lastName').touched" class="error">
+                    Maximum of 24 characters
+                </div>
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" class="form-control" formControlName="email">
+                <div *ngIf="signUpForm.get('email').hasError('required') && signUpForm.get('email').touched" class="error">
+                    Email is required
+                </div>
+                <div *ngIf="signUpForm.get('email').hasError('pattern') && signUpForm.get('email').touched" class="error">
+                    Invalid email
+                </div>
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
                 <input type="password" class="form-control" formControlName="password">
+                <div *ngIf="signUpForm.get('password').hasError('required') && signUpForm.get('password').touched" class="error">
+                    Password is required
+                </div>
+                <div *ngIf="signUpForm.get('password').hasError('pattern') && signUpForm.get('password').touched" class="error">
+                     Minimum 8 characters
+                     <p>At least 1 Alphabet and 1 Number</p>
+                </div>
             </div>
             <button type="submit" class="submit-btn" [disabled]="!signUpForm.valid">Create</button> or <a [routerLink]="['/login']">Login to an Existing Account</a>
         </form>
