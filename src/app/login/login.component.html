@@ -2,14 +2,24 @@
   <div class="col-xs-12 col-md-4 col-md-offset-4">
     <h1>Login</h1>
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-      <div class="form-group">
+      <div class="form-group email-form-group">
         <label for="email">Email</label>
         <input type="email" class="form-control" formControlName="email">
+        <div *ngIf="loginForm.get('email').hasError('required') && loginForm.get('email').touched" class="error">
+          Email is required
+        </div>
+        <div *ngIf="loginForm.get('email').hasError('pattern') && loginForm.get('email').touched" class="error">
+          Invalid email
+        </div>
       </div>
-      <div class="form-group">
+      <div class="form-group password-group">
         <label for="password">Password</label>
         <input type="password" class="form-control" formControlName="password">
+        <div *ngIf="loginForm.get('password').hasError('required') && loginForm.get('password').touched" class="error">
+          Password is required
+        </div>
       </div>
+      <a [routerLink]="['/forgotpassword']" class="forgot-password"><p>Forgot your password?</p></a>
       <button type="submit" class="submit-btn" [disabled]="!loginForm.valid">Login</button> or <a [routerLink]="['/signup']">Register a New Account</a>
     </form>
   </div>

@@ -5,6 +5,8 @@ import { SignupComponent } from "./signup/signup.component";
 import { OrdersComponent } from "./orders/orders.component";
 import { WishlistComponent } from "./wishlist/wishlist.component";
 import { LoginComponent } from "./login/login.component";
+import { ForgotPasswordComponent } from "./login/forgot-password/forgot-password.component";
+import { UserProfileComponent } from "./header/user/user-profile/user-profile.component";
 
 const APP_ROUTES: Routes = [
     { path: '', redirectTo: '/', pathMatch: 'full' },
@@ -14,7 +16,10 @@ const APP_ROUTES: Routes = [
     { path: 'login', component: LoginComponent },
     { path: 'logout', redirectTo:'/', pathMatch: 'full' },
     { path: 'orders', component: OrdersComponent },
-    { path: 'wishlist', component: WishlistComponent }
+    { path: 'wishlist', component: WishlistComponent },
+    { path: 'forgotpassword', component: ForgotPasswordComponent },
+    { path: 'user-profile', component: UserProfileComponent }
+
 ];
 
 export const Routing = RouterModule.forRoot(APP_ROUTES);

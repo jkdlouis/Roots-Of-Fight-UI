@@ -16,6 +16,9 @@ import { WishlistComponent } from './wishlist/wishlist.component';
 import { LoginComponent } from './login/login.component';
 import { AuthService } from './service/authentication.service';
 import { UserComponent } from './header/user/user.component';
+import { ForgotPasswordComponent } from './login/forgot-password/forgot-password.component';
+import { UserProfileComponent } from './header/user/user-profile/user-profile.component';
+import { UserProfileEditComponent } from './header/user/user-profile-edit/user-profile-edit.component';
 
 @NgModule({
     declarations: [
@@ -28,7 +31,10 @@ import { UserComponent } from './header/user/user.component';
         OrdersComponent,
         WishlistComponent,
         LoginComponent,
-        UserComponent
+        UserComponent,
+        ForgotPasswordComponent,
+        UserProfileComponent,
+        UserProfileEditComponent
     ],
     imports: [
         BrowserModule,
