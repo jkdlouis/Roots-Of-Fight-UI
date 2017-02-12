@@ -7,6 +7,7 @@ import { WishlistComponent } from "./wishlist/wishlist.component";
 import { LoginComponent } from "./login/login.component";
 import { ForgotPasswordComponent } from "./login/forgot-password/forgot-password.component";
 import { UserProfileComponent } from "./header/user/user-profile/user-profile.component";
+import { UserProfileEditComponent } from "./header/user/user-profile-edit/user-profile-edit.component";
 
 const APP_ROUTES: Routes = [
     { path: '', redirectTo: '/', pathMatch: 'full' },
@@ -18,7 +19,8 @@ const APP_ROUTES: Routes = [
     { path: 'orders', component: OrdersComponent },
     { path: 'wishlist', component: WishlistComponent },
     { path: 'forgotpassword', component: ForgotPasswordComponent },
-    { path: 'user-profile', component: UserProfileComponent }
+    { path: 'user-profile', component: UserProfileComponent },
+    { path: 'user-profile-edit', component: UserProfileEditComponent }
 
 ];
 
