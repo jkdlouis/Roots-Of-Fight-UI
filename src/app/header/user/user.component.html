@@ -8,8 +8,9 @@
         <li><a [routerLink] = "['/login']">Login</a></li>
       </ul>
       <ul *ngIf="isLoggedIn()" class="dropdown-menu" aria-labelledby="dropdownMenu1">
-        <li><a [routerLink] = "['/orders']">My Orders</a></li>
-        <li><a [routerLink] = "['/wishlist']">My Wishlist</a></li>
+        <li><a [routerLink] = "['/orders']">Orders</a></li>
+        <li><a [routerLink] = "['/wishlist']">Wish Lists</a></li>
+        <li><a [routerLink] = "['/user-profile']">Profile</a></li>
         <li><a [routerLink] = "['/logout']" (click)="onLogout()">Log Out</a></li>
       </ul>
     </li>
