@@ -9,9 +9,29 @@ import { User } from "../../../model/user.model";
 })
 export class UserProfileComponent implements OnInit {
 
-  constructor(private authService: AuthService) { }
+  firstName: string;
+  lastName: string;
+  email: string;
+  address: string;
+  city: string;
+  state: string;
+  zipcode: string;
+
+  constructor(private authService: AuthService) {
+  }
 
   ngOnInit() {
+    this.authService.getUserProfile()
+        .subscribe(
+            (data) => {
+              this.firstName = data.firstName;
+              this.lastName = data.lastName;
+              this.email = data.email;
+              this.address = data.address;
+              this.city = data.city;
+              this.state = data.state;
+            }
+        )
 
   }
 

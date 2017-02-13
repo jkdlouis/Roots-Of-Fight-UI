@@ -2,18 +2,18 @@
     <div class="col-xs-6 col-xs-offset-3">
         <div class="user-img-box">
             <img class="img-circle img-responsive center-block" src="../../../../assets/images/user/louis-huang.jpg" width="150px">
-            <h2>Louis Huang</h2>
-            <h2>Irvine, CA</h2>
+            <h2>{{firstName}} {{lastName}}</h2>
+            <h2>{{city}}, {{state}}</h2>
             <button class="edit-btn"><a [routerLink]="['/user-profile-edit']">Edit</a></button>
         </div>
         <div class="user-info-box">
             <div class="col-xs-6">
                 <ul class="list-unstyled">
-                    <li>Email: test@test.com</li>
-                    <li>Address: 123 Jeffery</li>
-                    <li>City: Irvine</li>
-                    <li>State: California</li>
-                    <li>Phone: 123-321-1234</li>
+                    <li>Email: {{email}}</li>
+                    <li>Address: {{address}}</li>
+                    <li>City: {{city}}</li>
+                    <li>State: {{state}}</li>
+                    <li>Phone: {{phoneNumber}}</li>
                 </ul>
             </div>
             <div class="col-xs-6">
