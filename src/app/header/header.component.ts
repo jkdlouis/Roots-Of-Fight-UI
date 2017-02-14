@@ -5,11 +5,12 @@ import { Router } from "@angular/router";
 @Component({
     selector: 'app-header',
     templateUrl: 'header.component.html',
-    styleUrls: ['header.component.sass']
+    styleUrls: [ 'header.component.sass' ]
 })
 export class HeaderComponent {
 
-    constructor(private authService: AuthService, private router: Router) {}
+    constructor(private authService: AuthService, private router: Router) {
+    }
 
     // boolean for toggle
 
@@ -33,7 +34,7 @@ export class HeaderComponent {
         "JACKETS"
     ];
 
-    strikingArts : string[] = [
+    strikingArts: string[] = [
         "BOXING",
         "KARATE",
         "TAEKWONDO",
@@ -56,14 +57,14 @@ export class HeaderComponent {
     ];
 
     toggle(expanded) {
-        this[expanded] = !this[expanded];
+        this[ expanded ] = !this[ expanded ];
     }
 
     // User Account Authenticaltion
 
     onLogout() {
         this.authService.logout();
-        this.router.navigate(['/signin']);
+        this.router.navigate([ '/signin' ]);
     }
 
 }

@@ -13,19 +13,20 @@ export class SignupComponent implements OnInit {
 
     signUpForm: FormGroup;
 
-    constructor(private formBuilder: FormBuilder, private authService: AuthService) {}
+    constructor(private formBuilder: FormBuilder, private authService: AuthService) {
+    }
 
     ngOnInit() {
         this.signUpForm = this.formBuilder.group({
             'firstName': [ '', [
                 Validators.required,
                 Validators.minLength(2),
-                Validators.maxLength(24)  ]
+                Validators.maxLength(24) ]
             ],
             'lastName': [ '', [
                 Validators.required,
                 Validators.minLength(2),
-                Validators.maxLength(24)  ]
+                Validators.maxLength(24) ]
             ],
             'email': [ '', [
                 Validators.required,
@@ -56,11 +57,6 @@ export class SignupComponent implements OnInit {
             );
         this.signUpForm.reset();
     }
-
-
-
-
-
 
 
 }

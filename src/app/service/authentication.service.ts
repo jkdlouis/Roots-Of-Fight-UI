@@ -45,22 +45,21 @@ export class AuthService {
     getUserProfile() {
         const headers = new Headers({ 'Content-Type': 'application/json' });
         const token = localStorage.getItem('token')
-            ? '?token=' + localStorage.getItem('token'): '';
-        return this.http.get('http://127.0.0.1:3000/user/user-profile' + token, { headers: headers } )
+            ? '?token=' + localStorage.getItem('token') : '';
+        return this.http.get('http://127.0.0.1:3000/user/user-profile' + token, { headers: headers })
             .map((response: Response) => response.json())
             .catch((error: Response) => Observable.throw(error.json()));
     }
 
     updateUserProfile(user: User) {
         const body = JSON.stringify(user);
-        const headers = new Headers({'Content-Type': 'application/json'});
+        const headers = new Headers({ 'Content-Type': 'application/json' });
         const token = localStorage.getItem('token')
-            ? '?token=' + localStorage.getItem('token'): '';
-        return this.http.get('http://127.0.0.1:3000/user/user-profile/update' + token, { headers: headers } )
+            ? '?token=' + localStorage.getItem('token') : '';
+        return this.http.patch('http://127.0.0.1:3000/user/user-profile/update' + token, body, { headers: headers })
             .map((response: Response) => response.json())
             .catch((error: Response) => Observable.throw(error.json()));
     }
-
 
 
 }

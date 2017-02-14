@@ -31,10 +31,12 @@
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" class="form-control" formControlName="email">
-                <div *ngIf="signUpForm.get('email').hasError('required') && signUpForm.get('email').touched" class="error">
+                <div *ngIf="signUpForm.get('email').hasError('required') && signUpForm.get('email').touched"
+                     class="error">
                     Email is required
                 </div>
-                <div *ngIf="signUpForm.get('email').hasError('pattern') && signUpForm.get('email').touched" class="error">
+                <div *ngIf="signUpForm.get('email').hasError('pattern') && signUpForm.get('email').touched"
+                     class="error">
                     Invalid email
                 </div>
             </div>

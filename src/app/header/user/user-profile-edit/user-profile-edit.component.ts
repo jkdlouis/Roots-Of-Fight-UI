@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { AuthService } from "../../../service/authentication.service";
+import { User } from "../../../model/user.model";
 
 
 @Component({
@@ -12,15 +13,22 @@ export class UserProfileEditComponent implements OnInit {
 
     editForm: FormGroup;
 
+    user: User;
+
     firstName: string;
     lastName: string;
     email: string;
-    address: string = null;
+    address: string;
     city: string;
     state: string;
     zipcode: string;
 
     constructor(private formBuilder: FormBuilder, private authService: AuthService) {
+    }
+
+    onSubmit() {
+        console.log(this.editForm.value);
+        this.editForm.reset();
     }
 
     ngOnInit() {
@@ -79,28 +87,16 @@ export class UserProfileEditComponent implements OnInit {
         this.authService.getUserProfile()
             .subscribe(
                 (data) => {
-                    console.log(data);
-                        this.firstName = data.firstName;
-                        this.lastName = data.lastName;
-                        this.email = data.email;
-                        this.address = data.address;
-                        this.city = data.city;
-                        this.state = data.state;
+                    this.firstName = data.firstName;
+                    this.lastName = data.lastName;
+                    this.email = data.email;
+                    this.address = data.address;
+                    this.city = data.city;
+                    this.state = data.state;
+                    this.zipcode = data.zipcode;
+
                 }
-            )
+            );
     }
-
-    // onUpdate() {
-    //   if(this.user) {
-    //       this.authService.updateUserProfile(this.user)
-    //           .subscribe(
-    //               result => console.log(result)
-    //           );
-    //       this.user = null;
-    //   } else {
-    //
-    //   }
-    // }
-
 
 }
