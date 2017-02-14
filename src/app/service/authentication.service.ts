@@ -26,6 +26,14 @@ export class AuthService {
             .catch((error: Response) => Observable.throw(error.json()));
     }
 
+    logout() {
+        localStorage.clear();
+    }
+
+    isLoggedIn() {
+        return localStorage.getItem('token') !== null;
+    }
+
     retrievePassword(user: User) {
         const body = JSON.stringify(user);
         const headers = new Headers({ 'Content-Type': 'application/json' });
@@ -43,12 +51,16 @@ export class AuthService {
             .catch((error: Response) => Observable.throw(error.json()));
     }
 
-    logout() {
-        localStorage.clear();
+    updateUserProfile(user: User) {
+        const body = JSON.stringify(user);
+        const headers = new Headers({'Content-Type': 'application/json'});
+        const token = localStorage.getItem('token')
+            ? '?token=' + localStorage.getItem('token'): '';
+        return this.http.get('http://127.0.0.1:3000/user/user-profile/update' + token, { headers: headers } )
+            .map((response: Response) => response.json())
+            .catch((error: Response) => Observable.throw(error.json()));
     }
 
-    isLoggedIn() {
-        return localStorage.getItem('token') !== null;
-    }
+
 
 }

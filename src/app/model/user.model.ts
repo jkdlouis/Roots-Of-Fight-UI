@@ -7,6 +7,9 @@ export class User {
                  public address?: string,
                  public city?: string,
                  public state?: string,
-                 public zipcode?: string
+                 public zipcode?: string,
+                 public dobMonth?: string,
+                 public dobDate?: string,
+                 public dobYear?: string
     ) {}
 }

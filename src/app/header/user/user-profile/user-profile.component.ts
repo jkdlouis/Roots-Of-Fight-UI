@@ -30,6 +30,7 @@ export class UserProfileComponent implements OnInit {
               this.address = data.address;
               this.city = data.city;
               this.state = data.state;
+              this.zipcode = data.zipcode;
             }
         )
 
