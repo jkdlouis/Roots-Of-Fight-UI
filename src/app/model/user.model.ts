@@ -7,7 +7,11 @@ export class User {
                 public address?: string,
                 public city?: string,
                 public state?: string,
-                public zipcode?: string
+                public zipcode?: string,
+                public birthMonth?: string,
+                public birthDate?: number,
+                public birthYear?: number,
+                public favorMartialArt?: string
     ) {
     }
 }
