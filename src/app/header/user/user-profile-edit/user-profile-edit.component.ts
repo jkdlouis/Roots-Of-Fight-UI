@@ -21,10 +21,59 @@ export class UserProfileEditComponent implements OnInit {
     zipcode: string;
     state: string;
 
+    birthMonths: string[] = [
+        'January',
+        'Febuary',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December'
+    ];
+
+    birthYears: number[] = [];
+
+    birthDates: number[] = [];
+
+    martialArts: string[] = [
+        "BOXING",
+        "KARATE",
+        "TAEKWONDO",
+        "MUAY THAI",
+        "SAVATE",
+        "SANDA",
+        "JUDO",
+        "BRAZILIAN JIU-JITSU",
+        "GRECO ROMAN WRESTLING",
+        "CHINESE WRESTLING",
+        "SILAT",
+        "KALI",
+        "ISREAL COMBAT KNIFE"
+    ];
+
+    isChecked: boolean = false;
+
+    onCheck() {
+        this.isChecked = !this.isChecked;
+    }
+
     constructor(private formBuilder: FormBuilder, private authService: AuthService) {
     }
 
     ngOnInit() {
+
+        for (let i = 1999; i <= 2017; i++) {
+            this.birthYears.push(i);
+        }
+
+        for (let i = 1; i <= 31; i++) {
+            this.birthDates.push(i);
+        }
 
         this.editForm = this.formBuilder.group({
             'firstName': [ '', [
@@ -54,32 +103,21 @@ export class UserProfileEditComponent implements OnInit {
                 Validators.pattern("[a-z0-9!#$%&'*+/=?^_`{|}" +
                     "~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9]" +
                     "(?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?")
-            ] ]
-            // 'currentPassword': ['', [
-            //     Validators.required,
-            // ]],
-            // 'newPassword': ['', [
-            //     Validators.required,
-            //   Validators.pattern(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/)
-            // ]],
-            // 'repeatNewPassword': ['',
-            //     Validators.required,
-            //   Validators.pattern(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/)
-            // ],
-            // 'dobMonth': ['', [
-            //     Validators.required
-            // ]],
-            // 'dobDate': ['', [
-            //   Validators.required
-            // ]],
-            // 'dobYear': ['', [
-            //   Validators.required
-            // ]]
+            ] ],
+            'birthMonth': ['', [
+                Validators.required
+            ]],
+            'birthDate': ['', [
+              Validators.required
+            ]],
+            'birthYear': ['', [
+              Validators.required
+            ]]
         });
 
         this.authService.getUserProfile()
             .subscribe(
-                (data : User) => {
+                (data: User) => {
                     this.firstName = data.firstName;
                     this.lastName = data.lastName;
                     this.email = data.email;
