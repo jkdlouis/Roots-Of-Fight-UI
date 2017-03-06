@@ -13,22 +13,15 @@ export class UserProfileEditComponent implements OnInit {
 
     editForm: FormGroup;
 
-    user: User;
-
     firstName: string;
     lastName: string;
     email: string;
     address: string;
     city: string;
-    state: string;
     zipcode: string;
+    state: string;
 
     constructor(private formBuilder: FormBuilder, private authService: AuthService) {
-    }
-
-    onSubmit() {
-        console.log(this.editForm.value);
-        this.editForm.reset();
     }
 
     ngOnInit() {
@@ -86,7 +79,7 @@ export class UserProfileEditComponent implements OnInit {
 
         this.authService.getUserProfile()
             .subscribe(
-                (data) => {
+                (data : User) => {
                     this.firstName = data.firstName;
                     this.lastName = data.lastName;
                     this.email = data.email;
@@ -94,9 +87,22 @@ export class UserProfileEditComponent implements OnInit {
                     this.city = data.city;
                     this.state = data.state;
                     this.zipcode = data.zipcode;
-
                 }
             );
+
     }
+
+    onSubmit() {
+        if (this.editForm.value) {
+            this.authService.updateUserProfile(this.editForm.value)
+                .subscribe(
+                    result => console.log(result),
+                    error => console.log(error)
+                );
+        }
+
+        this.editForm.reset();
+    }
+
 
 }
