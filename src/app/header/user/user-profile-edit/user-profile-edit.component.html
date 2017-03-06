@@ -4,8 +4,7 @@
             <div class="row">
                 <div class="form-group col-lg-6">
                     <label for="firstName">First Name</label>
-                    <input class="form-control" type="text" name="firstName" formControlName="firstName"
-                           [ngModel]="firstName" required>
+                    <input class="form-control" type="text" name="firstName" formControlName="firstName" [ngModel]="firstName" required>
                     <div *ngIf="editForm.get('firstName').hasError('required') && editForm.get('firstName').touched"
                          class="error">
                         First Name is Required
@@ -21,8 +20,7 @@
                 </div>
                 <div class="form-group col-lg-6">
                     <label for="lastName">Last Name</label>
-                    <input class="form-control" type="text" name="lastName" formControlName="lastName"
-                           [ngModel]="lastName" required>
+                    <input class="form-control" type="text" name="lastName" formControlName="lastName" [ngModel]="lastName" required>
                     <div *ngIf="editForm.get('lastName').hasError('required') && editForm.get('lastName').touched"
                          class="error">
                         Last name is required
@@ -40,8 +38,7 @@
             <div class="row">
                 <div class="form-group col-lg-12">
                     <label for="address">Address</label>
-                    <input class="form-control" type="text" name="address" formControlName="address" [ngModel]="address"
-                           required>
+                    <input class="form-control" type="text" name="address" formControlName="address" [ngModel]="address" required>
                     <div *ngIf="editForm.get('address').hasError('required') && editForm.get('address').touched"
                          class="error">
                         Address is required
@@ -51,8 +48,7 @@
             <div class="row">
                 <div class="form-group col-lg-4">
                     <label for="city">City</label>
-                    <input class="form-control" type="text" name="city" formControlName="city" [ngModel]="city"
-                           required>
+                    <input class="form-control" type="text" name="city" formControlName="city" [ngModel]="city" required>
                     <div *ngIf="editForm.get('city').hasError('required') && editForm.get('city').touched"
                          class="error">
                         City is required
@@ -60,8 +56,7 @@
                 </div>
                 <div class="form-group col-lg-4">
                     <label for="state">State</label>
-                    <input class="form-control" type="text" name="state" formControlName="state" [ngModel]="state"
-                           required>
+                    <input class="form-control" type="text" name="state" formControlName="state" [ngModel]="state" required>
                     <div *ngIf="editForm.get('state').hasError('required') && editForm.get('state').touched"
                          class="error">
                         State is required
@@ -69,8 +64,7 @@
                 </div>
                 <div class="form-group col-lg-4">
                     <label for="zipcode">Zip Code</label>
-                    <input class="form-control" type="text" name="zipcode" formControlName="zipcode" [ngModel]="zipcode"
-                           required>
+                    <input class="form-control" type="text" name="zipcode" formControlName="zipcode" [ngModel]="zipcode" required>
                     <div *ngIf="editForm.get('zipcode').hasError('required') && editForm.get('zipcode').touched"
                          class="error">
                         State is required
@@ -80,8 +74,7 @@
             <div class="row">
                 <div class="form-group col-lg-12">
                     <label for="email">Email</label>
-                    <input class="form-control" type="email" name="email" formControlName="email" [ngModel]="email"
-                           required>
+                    <input class="form-control" type="email" name="email" formControlName="email" [ngModel]="email" required>
                     <div *ngIf="editForm.get('email').hasError('required') && editForm.get('email').touched"
                          class="error">
                         Email is required
