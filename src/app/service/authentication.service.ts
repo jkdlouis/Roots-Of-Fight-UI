@@ -46,7 +46,7 @@ export class AuthService {
         const headers = new Headers({ 'Content-Type': 'application/json' });
         const token = localStorage.getItem('token')
             ? '?token=' + localStorage.getItem('token') : '';
-        return this.http.get('http://127.0.0.1:3000/user/user-profile' + token, { headers: headers })
+        return this.http.get(`http://127.0.0.1:3000/user/user-profile${token}`, { headers: headers })
             .map((response: Response) => response.json())
             .catch((error: Response) => Observable.throw(error.json()));
     }
@@ -56,7 +56,7 @@ export class AuthService {
         const headers = new Headers({ 'Content-Type': 'application/json' });
         const token = localStorage.getItem('token')
             ? '?token=' + localStorage.getItem('token') : '';
-        return this.http.patch('http://127.0.0.1:3000/user/user-profile/update' + token, body, { headers: headers })
+        return this.http.put(`http://127.0.0.1:3000/user/user-profile/update${token}`, body, { headers: headers })
             .map((response: Response) => response.json())
             .catch((error: Response) => Observable.throw(error.json()));
     }
