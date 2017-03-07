@@ -9,13 +9,13 @@ import { User } from "../../../model/user.model";
 })
 export class UserProfileComponent implements OnInit {
 
-    firstName: string;
-    lastName: string;
-    email: string;
-    address: string;
-    city: string;
-    state: string;
-    zipcode: string;
+    private firstName: string;
+    private lastName: string;
+    private email: string;
+    private address: string;
+    private city: string;
+    private state: string;
+    private zipcode: string;
 
     constructor(private authService: AuthService) {
     }

@@ -91,18 +91,18 @@
                     <label for="DOB">Date Of Birth</label>
                 </div>
                 <div class="form-group col-xs-4">
-                    <select name="birthMonth" class="form-control">
+                    <select name="birthMonth" class="form-control" formControlName="birthMonth">
                         <option [value]="month" *ngFor="let month of birthMonths">{{month}}</option>
                     </select>
                 </div>
                 <div class="form-group col-xs-4">
-                    <select name="birthDate" class="form-control">
-                        <option value="date" *ngFor="let date of birthDates">{{date}}</option>
+                    <select name="birthDate" class="form-control" formControlName="birthDate">
+                        <option [value]="date" *ngFor="let date of birthDates">{{date}}</option>
                     </select>
                 </div>
                 <div class="form-group col-xs-4">
-                    <select name="birthYear" class="form-control">
-                        <option value="year" *ngFor="let year of birthYears">{{year}}</option>
+                    <select name="birthYear" class="form-control" formControlName="birthYear">
+                        <option [value]="year" *ngFor="let year of birthYears">{{year}}</option>
                     </select>
                 </div>
             </div>
@@ -112,7 +112,10 @@
                 </div>
                 <div class="col-xs-12">
                         <label class="checkbox-inline" *ngFor="let martialArt of martialArts">
-                            <input type="checkbox" [value]="martialArt"><i class="fa fa-square-o fa-lg" [ngClass]="{'fa-square-o' : !isChecked, 'fa-check-square-o' : isChecked}" (click)="onCheck()"></i>{{martialArt | lowercase }}
+                            <input type="checkbox" [value]="martialArt" formControlName="martialArt" ngModel="isChecked">
+                            <i class="fa fa-square-o fa-lg"
+                               [ngClass]="{'fa-square-o' : !isChecked, 'fa-check-square-o' : isChecked}"
+                               (click)="onCheck()"></i>{{martialArt | lowercase }}
                         </label>
                 </div>
             </div>

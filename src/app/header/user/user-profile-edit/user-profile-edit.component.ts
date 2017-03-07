@@ -11,19 +11,19 @@ import { User } from "../../../model/user.model";
 })
 export class UserProfileEditComponent implements OnInit {
 
-    editForm: FormGroup;
+    private editForm: FormGroup;
 
-    firstName: string;
-    lastName: string;
-    email: string;
-    address: string;
-    city: string;
-    zipcode: string;
-    state: string;
+    private firstName: string;
+    private lastName: string;
+    private email: string;
+    private address: string;
+    private city: string;
+    private zipcode: string;
+    private state: string;
 
-    birthMonths: string[] = [
+    private birthMonths: string[] = [
         'January',
-        'Febuary',
+        'February',
         'March',
         'April',
         'May',
@@ -36,11 +36,11 @@ export class UserProfileEditComponent implements OnInit {
         'December'
     ];
 
-    birthYears: number[] = [];
+    private birthYears: number[] = [];
 
-    birthDates: number[] = [];
+    private birthDates: number[] = [];
 
-    martialArts: string[] = [
+    private martialArts: string[] = [
         "BOXING",
         "KARATE",
         "TAEKWONDO",
@@ -56,7 +56,7 @@ export class UserProfileEditComponent implements OnInit {
         "ISREAL COMBAT KNIFE"
     ];
 
-    isChecked: boolean = false;
+    private isChecked: boolean = false;
 
     onCheck() {
         this.isChecked = !this.isChecked;
@@ -104,15 +104,10 @@ export class UserProfileEditComponent implements OnInit {
                     "~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9]" +
                     "(?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?")
             ] ],
-            'birthMonth': ['', [
-                Validators.required
-            ]],
-            'birthDate': ['', [
-              Validators.required
-            ]],
-            'birthYear': ['', [
-              Validators.required
-            ]]
+            'birthMonth': [ '', Validators.required ],
+            'birthDate': [ '', Validators.required ],
+            'birthYear': [ '', Validators.required ],
+            'martialArt': [ '', Validators.required ]
         });
 
         this.authService.getUserProfile()

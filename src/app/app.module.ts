@@ -19,6 +19,7 @@ import { UserComponent } from './header/user/user.component';
 import { ForgotPasswordComponent } from './login/forgot-password/forgot-password.component';
 import { UserProfileComponent } from './header/user/user-profile/user-profile.component';
 import { UserProfileEditComponent } from './header/user/user-profile-edit/user-profile-edit.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
     declarations: [
@@ -34,7 +35,8 @@ import { UserProfileEditComponent } from './header/user/user-profile-edit/user-p
         UserComponent,
         ForgotPasswordComponent,
         UserProfileComponent,
-        UserProfileEditComponent
+        UserProfileEditComponent,
+        NotFoundComponent
     ],
     imports: [
         BrowserModule,

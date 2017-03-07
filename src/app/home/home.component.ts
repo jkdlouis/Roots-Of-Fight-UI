@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
-    products = [
+    private products = [
         {
             image: '../../assets/images/ALI_GREY_TRIBLEND_large.jpg',
             alt: 'Ali t-shirt',
