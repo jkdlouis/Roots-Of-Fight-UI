@@ -21,8 +21,11 @@
                                    }"></i>
                     </a>
                         <ul class="list-unstyled nav-items" *ngIf="shopListIsExpanded">
-                            <li><a>- {{ shopLists[0]}} -</a></li>
-                            <li *ngFor="let shopList of shopLists | slice: 1"><a>{{ shopList }}</a></li>
+                            <li *ngFor="let shopList of shopLists">
+                                <a [routerLink]="shopList.link"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{ exact: shopList.exact }"
+                                    >{{ shopList.name }}</a></li>
                         </ul>
                     </li>
                     <li><a class="nav-title" role="button" (click)="toggle('martialArtIsExpanded')">MARTIAL ARTS
@@ -39,7 +42,9 @@
                                            'fa-minus': strikingIsExpanded}"></i></a>
                                 <ul class="list-unstyled nav-items" *ngIf="strikingIsExpanded">
                                     <li *ngFor="let striking of strikingArts">
-                                        <a>{{ striking }}</a></li>
+                                        <a [routerLink]="striking.link"
+                                           routerLinkActive="active"
+                                           [routerLinkActiveOptions]="{ exact: striking.exact }">{{ striking.name }}</a></li>
                                 </ul>
                             </li>
                             <li><a role="button" (click)="toggle('grapplingIsExpanded')">GRAPPLING
@@ -50,7 +55,10 @@
                                            'fa-minus': grapplingIsExpanded
                                            }"></i></a>
                                 <ul class="list-unstyled nav-items" *ngIf="grapplingIsExpanded">
-                                    <li *ngFor="let grappling of grapplingArts"><a>{{ grappling }}</a></li>
+                                    <li *ngFor="let grappling of grapplingArts">
+                                        <a [routerLink]="grappling.link"
+                                           routerLinkActive="active"
+                                           [routerLinkActiveOptions]="{ exact: grappling.exact }">{{ grappling.name }}</a></li>
                                 </ul>
                             </li>
                             <li><a role="button" (click)="toggle('weaponIsExpanded')">WEAPONS
@@ -61,7 +69,10 @@
                                            'fa-minus': weaponIsExpanded
                                            }"></i></a>
                                 <ul class="list-unstyled nav-items" *ngIf="weaponIsExpanded">
-                                    <li *ngFor="let weapon of weaponArts"><a>{{ weapon }}</a></li>
+                                    <li *ngFor="let weapon of weaponArts">
+                                        <a [routerLink]="weapon.link"
+                                           routerLinkActive="active"
+                                           [routerLinkActiveOptions]="{ exact: weapon.exact }">{{ weapon.name }}</a></li>
                                 </ul>
                             </li>
                         </ul>
