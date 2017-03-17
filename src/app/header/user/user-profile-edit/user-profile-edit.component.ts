@@ -40,26 +40,57 @@ export class UserProfileEditComponent implements OnInit {
 
     private birthDates: number[] = [];
 
-    private martialArts: string[] = [
-        "BOXING",
-        "KARATE",
-        "TAEKWONDO",
-        "MUAY THAI",
-        "SAVATE",
-        "SANDA",
-        "JUDO",
-        "BRAZILIAN JIU-JITSU",
-        "GRECO ROMAN WRESTLING",
-        "CHINESE WRESTLING",
-        "SILAT",
-        "KALI",
-        "ISREAL COMBAT KNIFE"
+    private martialArts = [
+        {
+            name: 'BOXING',
+            isChecked: false,
+        },
+        {
+            name: 'KARATE',
+            isChecked: false,
+        },
+        {
+            name: 'TAEKWONDO',
+            isChecked: false,
+        },
+        {
+            name: 'MUAY THAI',
+            checked: false,
+        },
+        {
+            name: 'SAVATE',
+            isChecked: false,
+        },
+        {
+            name: 'JUDO',
+            isChecked: false,
+        },
+        {
+            name: 'BRAZILIAN JIU-JITSU',
+            isChecked: false,
+        },
+        {
+            name: 'GRECO ROMAN WRESTLING',
+            isChecked: false,
+        },
+        {
+            name: 'CHINESE WRESTLING',
+            isChecked: false,
+        },
+        {
+            name: 'KALI',
+            isChecked: false,
+        },
+        {
+            name: 'ISREAL COMBAT KNIFE',
+            isChecked: false,
+        }
     ];
 
     private isChecked: boolean = false;
 
-    onCheck() {
-        this.isChecked = !this.isChecked;
+    onCheck(value) {
+        this.martialArts.isChecked = !value.isChecked;
     }
 
     constructor(private formBuilder: FormBuilder, private authService: AuthService) {
