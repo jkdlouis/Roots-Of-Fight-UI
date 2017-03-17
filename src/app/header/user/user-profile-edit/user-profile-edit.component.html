@@ -115,7 +115,7 @@
                             <input type="checkbox" [value]="martialArt" formControlName="martialArt" ngModel="isChecked">
                             <i class="fa fa-square-o fa-lg"
                                [ngClass]="{'fa-square-o' : !isChecked, 'fa-check-square-o' : isChecked}"
-                               (click)="onCheck()"></i>{{martialArt | lowercase }}
+                               (click)="onCheck(isChecked)"></i>{{martialArt.name | lowercase }}
                         </label>
                 </div>
             </div>
