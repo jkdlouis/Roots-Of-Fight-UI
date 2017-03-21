@@ -21,6 +21,7 @@ import { UserProfileComponent } from './pages/user/user-profile/user-profile.com
 import { UserProfileEditComponent } from './pages/user/user-profile-edit/user-profile-edit.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { ProductsComponent } from './pages/products/products.component';
+import { CarouselComponent } from './pages/partials/carousel/carousel.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { ProductsComponent } from './pages/products/products.component';
         UserProfileComponent,
         UserProfileEditComponent,
         NotFoundComponent,
-        ProductsComponent
+        ProductsComponent,
+        CarouselComponent
     ],
     imports: [
         BrowserModule,
