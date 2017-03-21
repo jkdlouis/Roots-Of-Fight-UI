@@ -15,11 +15,13 @@ import { OrdersComponent } from './pages/orders/orders.component';
 import { WishlistComponent } from './pages/wishlist/wishlist.component';
 import { LoginComponent } from './pages/login/login.component';
 import { AuthService } from './service/authentication.service';
-import { UserComponent } from './pages/partials/header/user/user.component';
+import { UserComponent } from './pages/user/user.component';
 import { ForgotPasswordComponent } from './pages/login/forgot-password/forgot-password.component';
-import { UserProfileComponent } from './pages/partials/header/user/user-profile/user-profile.component';
-import { UserProfileEditComponent } from './pages/partials/header/user/user-profile-edit/user-profile-edit.component';
+import { UserProfileComponent } from './pages/user/user-profile/user-profile.component';
+import { UserProfileEditComponent } from './pages/user/user-profile-edit/user-profile-edit.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { ProductsComponent } from './pages/products/products.component';
+
 
 @NgModule({
     declarations: [
@@ -36,7 +38,8 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
         ForgotPasswordComponent,
         UserProfileComponent,
         UserProfileEditComponent,
-        NotFoundComponent
+        NotFoundComponent,
+        ProductsComponent
     ],
     imports: [
         BrowserModule,
