@@ -1,14 +1,14 @@
 import { Routes, RouterModule } from "@angular/router";
-import { TeesComponent } from "./tees/tees.component";
-import { HomeComponent } from "./home/home.component";
-import { SignupComponent } from "./signup/signup.component";
-import { OrdersComponent } from "./orders/orders.component";
-import { WishlistComponent } from "./wishlist/wishlist.component";
-import { LoginComponent } from "./login/login.component";
-import { ForgotPasswordComponent } from "./login/forgot-password/forgot-password.component";
-import { UserProfileComponent } from "./header/user/user-profile/user-profile.component";
-import { UserProfileEditComponent } from "./header/user/user-profile-edit/user-profile-edit.component";
-import { NotFoundComponent } from "./not-found/not-found.component";
+import { TeesComponent } from "./pages/products/tees/tees.component";
+import { HomeComponent } from "./pages/home/home.component";
+import { SignupComponent } from "./pages/signup/signup.component";
+import { OrdersComponent } from "./pages/orders/orders.component";
+import { WishlistComponent } from "./pages/wishlist/wishlist.component";
+import { LoginComponent } from "./pages/login/login.component";
+import { ForgotPasswordComponent } from "./pages/login/forgot-password/forgot-password.component";
+import { UserProfileComponent } from "./pages/partials/header/user/user-profile/user-profile.component";
+import { UserProfileEditComponent } from "./pages/partials/header/user/user-profile-edit/user-profile-edit.component";
+import { NotFoundComponent } from "./pages/not-found/not-found.component";
 
 const APP_ROUTES: Routes = [
     { path: '', redirectTo: '/', pathMatch: 'full' },

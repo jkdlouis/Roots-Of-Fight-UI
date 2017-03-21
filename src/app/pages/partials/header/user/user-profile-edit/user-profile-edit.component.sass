@@ -1,0 +1,43 @@
+@import "../../../../../colors"
+
+.user-profile-edit
+  padding: 50px
+
+  form
+    width: 550px
+    margin: 5rem auto 0 auto
+    line-height: 3rem
+
+    input[type="text"], input[type="email"], input[type="password"], select
+      font-size: 1em
+      border-radius: 5px
+      background: #000000
+      border: 1px solid #444444
+      box-shadow: none
+      color: $textColor-white
+
+    .radio-group
+      margin: 15px 0
+
+    button.btn.submit-btn
+      background-color: $mainRed
+      border-color: #444444
+      text-transform: uppercase
+      letter-spacing: 1.5px
+      border-radius: 5px
+      padding: 10px 12px
+      font-size: 1.4em
+      cursor: pointer
+      margin-top: 15px
+
+    .error
+      color: $mainRed
+      font-weight: bold
+
+    .fa.fa-square-o, .fa.fa-check-square-o
+      margin-right: 5px
+      vertical-align: middle
+
+    input[type=checkbox]
+      display: none
+      cursor: pointer
