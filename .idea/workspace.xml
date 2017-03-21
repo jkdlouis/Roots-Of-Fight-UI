@@ -1,26 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="49933796-c80e-423b-914a-a0479f79cea3" name="Default" comment="[feature] user birthday inpu">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/pages/partials/header/user/user-profile-edit/user-profile-edit.component.html" afterPath="$PROJECT_DIR$/src/app/pages/user/user-profile-edit/user-profile-edit.component.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/pages/partials/header/user/user-profile-edit/user-profile-edit.component.sass" afterPath="$PROJECT_DIR$/src/app/pages/user/user-profile-edit/user-profile-edit.component.sass" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/pages/partials/header/user/user-profile-edit/user-profile-edit.component.spec.ts" afterPath="$PROJECT_DIR$/src/app/pages/user/user-profile-edit/user-profile-edit.component.spec.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/pages/partials/header/user/user-profile-edit/user-profile-edit.component.ts" afterPath="$PROJECT_DIR$/src/app/pages/user/user-profile-edit/user-profile-edit.component.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/pages/partials/header/user/user-profile/user-profile.component.html" afterPath="$PROJECT_DIR$/src/app/pages/user/user-profile/user-profile.component.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/pages/partials/header/user/user-profile/user-profile.component.sass" afterPath="$PROJECT_DIR$/src/app/pages/user/user-profile/user-profile.component.sass" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/pages/partials/header/user/user-profile/user-profile.component.spec.ts" afterPath="$PROJECT_DIR$/src/app/pages/user/user-profile/user-profile.component.spec.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/pages/partials/header/user/user-profile/user-profile.component.ts" afterPath="$PROJECT_DIR$/src/app/pages/user/user-profile/user-profile.component.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/pages/partials/header/user/user.component.html" afterPath="$PROJECT_DIR$/src/app/pages/user/user.component.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/pages/partials/header/user/user.component.sass" afterPath="$PROJECT_DIR$/src/app/pages/user/user.component.sass" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/pages/partials/header/user/user.component.spec.ts" afterPath="$PROJECT_DIR$/src/app/pages/user/user.component.spec.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/pages/partials/header/user/user.component.ts" afterPath="$PROJECT_DIR$/src/app/pages/user/user.component.ts" />
+    <list default="true" id="49933796-c80e-423b-914a-a0479f79cea3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/app.component.sass" afterPath="$PROJECT_DIR$/src/app/app.component.sass" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/app.routing.ts" afterPath="$PROJECT_DIR$/src/app/app.routing.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/home/home.component.html" afterPath="$PROJECT_DIR$/src/app/pages/home/home.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/home/home.component.sass" afterPath="$PROJECT_DIR$/src/app/pages/home/home.component.sass" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/products/tees/tees.component.html" afterPath="$PROJECT_DIR$/src/app/pages/products/tees/tees.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/products/tees/tees.component.sass" afterPath="$PROJECT_DIR$/src/app/pages/products/tees/tees.component.sass" />
     </list>
     <ignored path="style-separates-man-ui.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -454,7 +436,7 @@
       <workItem from="1488759860700" duration="15120000" />
       <workItem from="1488843106786" duration="11876000" />
       <workItem from="1489682236178" duration="5041000" />
-      <workItem from="1490056568320" duration="11222000" />
+      <workItem from="1490056568320" duration="11256000" />
     </task>
     <task id="LOCAL-00001" summary="es6 syntax changed">
       <created>1488764344224</created>
@@ -568,11 +550,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490072483456</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="product landing page added">
+      <created>1490072532041</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1490072532041</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="151865000" />
+    <option name="totallyTimeSpent" value="151899000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="23" width="1280" height="773" extended-state="0" />
@@ -642,7 +631,8 @@
     <MESSAGE value="adding t-shirt products" />
     <MESSAGE value="checkbox condition added" />
     <MESSAGE value="product component added" />
-    <option name="LAST_COMMIT_MESSAGE" value="product component added" />
+    <MESSAGE value="product landing page added" />
+    <option name="LAST_COMMIT_MESSAGE" value="product landing page added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
