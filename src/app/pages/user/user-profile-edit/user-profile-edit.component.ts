@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
-import { AuthService } from "../../../../../service/authentication.service";
-import { User } from "../../../../../models/user.model";
+import { AuthService } from "../../../service/authentication.service";
+import { User } from "../../../models/user.model";
 
 
 @Component({
@@ -87,11 +87,11 @@ export class UserProfileEditComponent implements OnInit {
         }
     ];
 
-    private isChecked: boolean = false;
-
-    onCheck(value) {
-        this.martialArts.isChecked = !value.isChecked;
-    }
+    // private isChecked: boolean = false;
+    //
+    // onCheck(value) {
+    //     this.martialArts.isChecked = !value.isChecked;
+    // }
 
     constructor(private formBuilder: FormBuilder, private authService: AuthService) {
     }

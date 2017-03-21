@@ -1,16 +1,18 @@
-<div class="row tees-section">
+<div class="tees-section">
+<div class="row">
     <div class="col-xs-3">
-        <ul class="list-unstyled list-inline">
-            <li><a href="#">Home</a>/</li>
-            <li><a href="#">Collections</a>/</li>
-            <li><a href="#">Tees</a>/</li>
+        <ul class="sub-nav list-unstyled list-inline">
+            <li><a href="#">Home</a></li>
+            <li>/<a href="#"> Collections</a></li>
+            <li>/<a href="#"> Tees</a></li>
         </ul>
     </div>
 </div>
-<div class="row">
+<div class="row product-section">
     <div class="col-lg-12">
         <ul class="list-unstyled list-inline">
             <li class="col-lg-3" *ngFor="let product of products"><a href="#"><img class="img-responsive product-img" src="{{product.image}}" alt="product.alt"></a></li>
         </ul>
     </div>
+</div>
 </div>
