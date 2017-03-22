@@ -2,24 +2,26 @@
     <div class="col-lg-6 col-lg-push-2">
         <h1>Lorem ipsum dolor Tee</h1>
         <h3>$39.95 USD</h3>
+        <form (ngSubmit)="addToCart(form)" #form="ngForm" novalidate>
         <div class="row">
             <div class="form-group col-lg-4">
-                <select class="form-control">
-                    <option *ngFor="let size of sizeCharts">{{size}}</option>
+                <select class="form-control" name="size" [(ngModel)]="size" required>
+                    <option value="{{size}}" *ngFor="let size of sizeCharts">{{size}}</option>
                 </select>
             </div>
         </div>
         <div class="row">
             <div class="form-group col-xs-2">
                 <label>Quantity</label>
-                <input type="number">
+                <input type="number" name="quantity" [(ngModel)]="quantity" required>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-4">
-                <button class="btn submit-btn">ADD TO CART</button>
+                <button class="btn submit-btn" [disabled]="!form.valid">ADD TO CART</button>
             </div>
         </div>
+        </form>
         <div class="row">
                 <img class="product-img" src="http://placehold.it/150x150" alt="">
                 <img class="product-img" src="http://placehold.it/150x150" alt="">
