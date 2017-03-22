@@ -23,6 +23,8 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { CarouselComponent } from './pages/partials/carousel/carousel.component';
 import { ProductService } from "./service/product.service";
+import { ErrorsComponent } from './pages/errors/errors.component';
+import { ErrorService } from './service/errors.service';
 
 
 @NgModule({
@@ -42,7 +44,8 @@ import { ProductService } from "./service/product.service";
         UserProfileEditComponent,
         NotFoundComponent,
         ProductsComponent,
-        CarouselComponent
+        CarouselComponent,
+        ErrorsComponent
     ],
     imports: [
         BrowserModule,
@@ -52,7 +55,7 @@ import { ProductService } from "./service/product.service";
         ReactiveFormsModule,
         Routing
     ],
-    providers: [AuthService, ProductService],
+    providers: [AuthService, ProductService, ErrorService ],
     bootstrap: [ AppComponent ]
 })
 export class AppModule {
