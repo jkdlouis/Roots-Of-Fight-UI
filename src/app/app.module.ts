@@ -22,6 +22,7 @@ import { UserProfileEditComponent } from './pages/user/user-profile-edit/user-pr
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { CarouselComponent } from './pages/partials/carousel/carousel.component';
+import { ProductService } from "./service/product.service";
 
 
 @NgModule({
@@ -51,7 +52,7 @@ import { CarouselComponent } from './pages/partials/carousel/carousel.component'
         ReactiveFormsModule,
         Routing
     ],
-    providers: [AuthService],
+    providers: [AuthService, ProductService],
     bootstrap: [ AppComponent ]
 })
 export class AppModule {
