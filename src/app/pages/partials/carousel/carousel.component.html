@@ -3,7 +3,8 @@
     <div class="carousel-inner">
       <div class="item active">
         <div class="row">
-          <div *ngFor="let product of products; let i = index" class="col-sm-3"><a href="#x">
+          <div *ngFor="let product of products; let i = index" class="col-sm-3">
+            <a href="#x">
             <img *ngIf="i < 4" src="{{product.image}}" alt="{{product.alt}}"
                  class="img-responsive"></a>
           </div>
@@ -11,8 +12,8 @@
       </div>
       <div class="item">
         <div class="row">
-          <div *ngFor="let product of products | slice: 5; let i = index" class="col-sm-3"><a
-                  href="#x">
+          <div *ngFor="let product of products | slice: 5; let i = index" class="col-sm-3">
+            <a href="#x">
             <img *ngIf="i < 4" src="{{product.image}}" alt="{{product.alt}}"
                  class="img-responsive"></a>
           </div>
@@ -20,20 +21,20 @@
       </div>
       <div class="item">
         <div class="row">
-          <div *ngFor="let product of products | slice: 9; let i = index" class="col-sm-3"><a
-                  href="#x">
+          <div *ngFor="let product of products | slice: 9; let i = index" class="col-sm-3">
+            <a href="#x">
             <img *ngIf="i < 4" src="{{product.image}}" alt="{{product.alt}}"
                  class="img-responsive"></a>
           </div>
         </div>
       </div>
     </div>
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i
-            class="fa fa-chevron-left fa-2x" aria-hidden="true"></i>
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <i class="fa fa-chevron-left fa-2x" aria-hidden="true"></i>
     </a>
 
-    <a class="right carousel-control" href="#myCarousel" data-slide="next"><i
-            class="fa fa-chevron-right fa-2x" aria-hidden="true"></i>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i>
     </a>
   </div>
 </div>
