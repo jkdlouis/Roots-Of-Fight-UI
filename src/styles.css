@@ -5,6 +5,11 @@
   font-weight: 400;
   src: url(./assets/fonts/Roboto/Roboto-regular.ttf);
 }
+/*helper class*/
+
+.bold {
+  font-weight: bold;
+}
 
 /*global style*/
 html, body {
@@ -12,15 +17,38 @@ html, body {
 }
 
 body {
-  font-family: 'Roboto', 'Open Sans', sans-serif;
+  font-family: "Roboto", Helvetica, SansSerif, Arial;
   color: #e6e6e6;
   line-height: 1.6;
   font-size: 12px;
   letter-spacing: 1px;
   padding: 0;
-  margin: 0;
+  maring: 0;
+  font-weight: normal;
+  font-style: normal;
 }
 
-a {
+a, a:link, a:visited, a:hover, a:active {
   cursor: pointer;
+  text-decoration: none;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+  font-size: 1em;
+  border-radius: 5px;
+  background: #000000;
+  border: 1px solid #444444;
+  box-shadow: none;
+}
+
+button.btn.submit-btn {
+  background-color: #FF0000;
+  border-color: #444444;
+  text-transform: uppercase;
+  letter-spacing: 1.5em;
+  border-radius: 5px;
+  padding: 10px 12px;
+  font-size: 1.4em;
+  cursor: pointer;
+  margin-top: 15px;
 }
