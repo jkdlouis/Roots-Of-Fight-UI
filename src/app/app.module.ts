@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { CarouselModule } from 'ng2-bootstrap/carousel';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { Routing } from './app.routing';
@@ -51,9 +51,9 @@ import { ErrorService } from './service/errors.service';
         BrowserModule,
         FormsModule,
         HttpModule,
-        CarouselModule,
         ReactiveFormsModule,
-        Routing
+        Routing,
+        NgbModule.forRoot()
     ],
     providers: [AuthService, ProductService, ErrorService ],
     bootstrap: [ AppComponent ]
