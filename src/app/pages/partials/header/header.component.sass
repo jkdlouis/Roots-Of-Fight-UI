@@ -4,6 +4,9 @@
 .nav > li > a:focus, .nav > li > a:hover
   background-color: transparent
 
+.nav > li
+  display: inline-block
+
 .main-header
   .logo-header
     padding-top: 30px
@@ -19,13 +22,19 @@
       margin: 20px 0
       position: relative
 
-  .desktop-nav .desktop-nav-menu ul > li > a
-    padding: 0 20px
-    color: $linkColor-white
-    line-height: 30px
+  .desktop-nav-menu
+    margin-left: 30px
+    display: inline-block
 
-  .desktop-nav .desktop-nav-menu ul > li > a:hover
-    color: $mainRed
+    ul > li > a
+      padding: 0 20px
+      color: $linkColor-white
+      line-height: 30px
+
+    ul > li > a:hover
+      color: $mainRed
+      text-decoration: none
+
 
 
 
