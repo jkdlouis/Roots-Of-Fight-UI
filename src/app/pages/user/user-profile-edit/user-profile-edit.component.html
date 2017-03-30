@@ -94,16 +94,28 @@
                     <select name="birthMonth" class="form-control" formControlName="birthMonth">
                         <option [value]="month" *ngFor="let month of birthMonths">{{month}}</option>
                     </select>
-                </div>
+                    <div *ngIf="editForm.get('birthMonth').hasError('required') && editForm.get('birthMonth').touched"
+                         class="error">
+                        Month is required
+                    </div>
+                    </div>
                 <div class="form-group col-xs-4">
                     <select name="birthDate" class="form-control" formControlName="birthDate">
                         <option [value]="date" *ngFor="let date of birthDates">{{date}}</option>
                     </select>
+                    <div *ngIf="editForm.get('birthDate').hasError('required') && editForm.get('birthDate').touched"
+                         class="error">
+                        Date is required
+                    </div>
                 </div>
                 <div class="form-group col-xs-4">
                     <select name="birthYear" class="form-control" formControlName="birthYear">
                         <option [value]="year" *ngFor="let year of birthYears">{{year}}</option>
                     </select>
+                    <div *ngIf="editForm.get('birthYear').hasError('required') && editForm.get('birthYear').touched"
+                         class="error">
+                        Date is required
+                    </div>
                 </div>
             </div>
             <div class="row">
@@ -112,14 +124,14 @@
                 </div>
                 <div class="col-xs-12">
                         <label class="checkbox-inline" *ngFor="let martialArt of martialArts">
-                            <input type="checkbox" [value]="martialArt" formControlName="martialArt" ngModel="isChecked">
+                            <input type="checkbox" [value]="martialArt" formControlName="martialArt" ngModel="martialArt.isChecked">
                             <i class="fa fa-square-o fa-lg"
                                [ngClass]="{'fa-square-o' : !isChecked, 'fa-check-square-o' : isChecked}"
-                               (click)="onCheck(isChecked)"></i>{{martialArt.name | lowercase }}
+                               (click)="onCheck(martialArt.isChecked)"></i>{{martialArt.name | lowercase }}
                         </label>
                 </div>
             </div>
             <button class="submit-btn" [disabled]="!editForm.valid" type="submit">Update</button>
         </form>
-    </div>
+        </div>
 </div>

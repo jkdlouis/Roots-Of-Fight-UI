@@ -87,12 +87,6 @@ export class UserProfileEditComponent implements OnInit {
         }
     ];
 
-    // private isChecked: boolean = false;
-    //
-    // onCheck(value) {
-    //     this.martialArts.isChecked = !value.isChecked;
-    // }
-
     constructor(private formBuilder: FormBuilder, private authService: AuthService) {
     }
 

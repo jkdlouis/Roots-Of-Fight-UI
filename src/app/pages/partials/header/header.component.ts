@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { AuthService } from '../../../service/authentication.service';
-import { Router } from "@angular/router";
 
 interface Nav {
     link: string,
@@ -15,21 +13,21 @@ interface Nav {
 })
 export class HeaderComponent {
 
-    constructor(private authService: AuthService, private router: Router) {
+    constructor() {
     }
 
     // boolean for toggle
 
-    private mainMenuIsExpanded: boolean = false;
-    private shopListIsExpanded: boolean = false;
-    private martialArtIsExpanded: boolean = false;
-    private strikingIsExpanded: boolean = false;
-    private grapplingIsExpanded: boolean = false;
-    private weaponIsExpanded: boolean = false;
+    mainMenuIsExpanded: boolean = false;
+    shopListIsExpanded: boolean = false;
+    martialArtIsExpanded: boolean = false;
+    strikingIsExpanded: boolean = false;
+    grapplingIsExpanded: boolean = false;
+    weaponIsExpanded: boolean = false;
 
     // nav menu list
 
-    private shopLists: Nav[] = [
+    shopLists: Nav[] = [
         {
             name: '- SHOP ALL -',
             link: '/shop-all',
@@ -70,7 +68,7 @@ export class HeaderComponent {
         }
     ];
 
-    private strikingArts: Nav[] = [
+    strikingArts: Nav[] = [
         {
             name: 'BOXING',
             link: '/boxing',
@@ -103,7 +101,7 @@ export class HeaderComponent {
         }
     ];
 
-    private grapplingArts: Nav[] = [
+    grapplingArts: Nav[] = [
         {
             name: 'JUDO',
             link: '/judo',
@@ -126,7 +124,7 @@ export class HeaderComponent {
         }
     ];
 
-    private weaponArts: Nav[] = [
+    weaponArts: Nav[] = [
         {
             name: 'SILAT',
             link: '/silat',
@@ -148,11 +146,5 @@ export class HeaderComponent {
         this[ expanded ] = !this[ expanded ];
     }
 
-    // User Account Authenticaltion
-
-    onLogout() {
-        this.authService.logout();
-        this.router.navigate([ '/signin' ]);
-    }
 
 }
